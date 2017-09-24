@@ -11,4 +11,4 @@ Here are the steps taken in this starter:
  - Add [vue-shim.d.ts](https://github.com/alexjoverm/Vue-Typescript-Starter/blob/master/vue-shim.d.ts) in order to TypeScript recognize and treat .vue files
  - [build/vue-loader.conf.js](https://github.com/alexjoverm/Vue-Typescript-Starter/blob/master/build/vue-loader.conf.js#L12): add `esModule: true`
  - Rename `.js` to `.ts` files in `src` folder
- - Use `lang="ts"` in .vue files
+ - Use `lang="ts"` in .vue files  

@@ -1,35 +1,35 @@
 <template>
   <div class="hello">
-    <h1>{{ message }}</h1>
+    <h1>{{ fullMessage }}</h1>
     <button @click="clicked">Click</button>
   </div>
 </template>
 
 <script lang="ts">
-export default {
-  name: 'hello',
-  data () {
-    return {
-      message: 'Welcome to Your Vue.js App'
-    }
-  },
+  import Vue from 'vue';
+  import Component from 'vue-class-component';
 
-  computed: {
-    fullMessage(){
+  // Class name provides component name.
+  @Component({})
+  export default class Hello extends Vue {
+    // Plain properties replace data().
+    message: string = 'Hello Vue';
+
+    // computed() properties are implemented as getters.
+    get fullMessage() {
       return `${this.message} from Typescript`;
     }
-  },
 
-  created() {
-    console.log('created');
-  },
+    // Hooks are written as methods.
+    created() {
+      console.log('Created');
+    }
 
-  methods: {
-    clicked(){
-      console.log('clicked');
+    // Methods are written as methods too.
+    clicked() {
+      console.log('Clicked');
     }
   }
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
